@@ -7,7 +7,7 @@ properties {
 	$inEntity = @("LinqToQuerystring.EntityFramework\\LinqToQuerystring.EntityFramework.csproj")
 	$inOther =    @("LinqToQuerystring.Nancy\\LinqToQuerystring.Nancy.csproj",
 					"LinqToQuerystring.WebApi\\LinqToQuerystring.WebApi.csproj",
-					"LinqToQuerystring.WebApi2\\LinqToQuerystring.WebApi2.csproj")
+					"LinqToQuerystring.WebApi\\LinqToQuerystring.WebApi2.csproj")
     $SolutionFile = ".\\LinqToQuerystring.sln"
 }
 

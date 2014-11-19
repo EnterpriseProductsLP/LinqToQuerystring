@@ -16,7 +16,4 @@
         <dependency id="Antlr" version="3.5.0.2" />
     </dependencies>
   </metadata>
-  <files>
-    <file src="bin\Release\LinqToQuerystring.dll" target="lib\net35\LinqToQuerystring.dll" />
-  </files>
 </package>

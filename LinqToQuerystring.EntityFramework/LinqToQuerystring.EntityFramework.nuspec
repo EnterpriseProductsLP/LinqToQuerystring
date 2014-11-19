@@ -12,6 +12,8 @@
       parser for .NET that aims to provide a lightweight subset of the OData URI Specification
     </description>
     <copyright>Pete Smith 2013</copyright>
+    <dependencies>
+      <dependency id="OdataQueryToLinq" version="[1.0.0]"/>
+    </dependencies>
   </metadata>
-  <files />
 </package>
