@@ -37,7 +37,10 @@
   <ItemGroup>
     <Reference Include="Machine.Specifications, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Machine.Specifications.0.7.0-Unstable0077\lib\net20\Machine.Specifications.dll</HintPath>
+      <HintPath>..\packages\Machine.Specifications.0.7.0-Unstable0077\lib\net40\Machine.Specifications.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications.Clr4">
+      <HintPath>..\packages\Machine.Specifications.0.7.0-Unstable0077\lib\net40\Machine.Specifications.Clr4.dll</HintPath>
     </Reference>
     <Reference Include="Machine.Specifications.Should">
       <HintPath>..\packages\Machine.Specifications.Should.0.7.0-Unstable0008\lib\net20\Machine.Specifications.Should.dll</HintPath>

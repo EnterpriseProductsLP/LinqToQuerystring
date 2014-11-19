@@ -1,12 +1,13 @@
 ﻿# These properties needs to stay put and should have a different value, depending on the
 # repository its in, corresponding to a section in the machine's configuration.yml file
 properties {
+	$DefaultConfiguration = "Release"
 	$nugetFeedUrl = "http://proget.eprod.com:81/nuget/Foundation_Testing_Nuget"
 	$inCore = @("LinqToQuerystring\\LinqToQuerystring.csproj")
-	$inEntity = @("LinqToQuerystring.EntityFramework\\LinqToQuerystring.EntityFramework")
-	$inOther =    @("LinqToQuerystring.Nancy\\LinqToQuerystring.Nancy",
-					"LinqToQuerystring.WebApi\\LinqToQuerystring.WebApi",
-					"LinqToQuerystring.WebApi2\\LinqToQuerystring.WebApi2")
+	$inEntity = @("LinqToQuerystring.EntityFramework\\LinqToQuerystring.EntityFramework.csproj")
+	$inOther =    @("LinqToQuerystring.Nancy\\LinqToQuerystring.Nancy.csproj",
+					"LinqToQuerystring.WebApi\\LinqToQuerystring.WebApi.csproj",
+					"LinqToQuerystring.WebApi2\\LinqToQuerystring.WebApi2.csproj")
     $SolutionFile = ".\\LinqToQuerystring.sln"
 }
 
@@ -87,7 +88,8 @@ function Invoke-Package {
 	[CmdletBinding()]
     param(
 		[Parameter(Position=0,Mandatory=1)] [string]$ProjectFile = $null,
-		[Parameter(Position=1,Mandatory=0)] [bool]$WithSymbols = $true
+		[Parameter(Position=1,Mandatory=0)] [bool]$WithSymbols = $true,
+		[Parameter(Position=2,Mandatory=0)] [string]$Configuration = $DefaultConfiguration
 	)
 
     $file = Get-Item $ProjectFile
@@ -100,7 +102,7 @@ function Invoke-Package {
 	}
     
     Push-Location $file.Directory	
-    ../.nuget/NuGet.exe pack $file -OutputDirectory $OutputDirectory $symbols
+    ../.nuget/NuGet.exe pack $file -Prop Configuration=$Configuration -OutputDirectory $OutputDirectory $symbols
     Pop-Location 
 }
 
@@ -144,7 +146,7 @@ function Invoke-Compile {
     [CmdletBinding()]  
     param(  
         [Parameter(Position=0,Mandatory=1)] [string]$slnPath = $null,
-        [Parameter(Position=1,Mandatory=0)] [string]$configuration = "Release",
+        [Parameter(Position=1,Mandatory=0)] [string]$configuration = $DefaultConfiguration,
         [Parameter(Position=2,Mandatory=0)] [string]$platform = "Any CPU")
     $msbuildexe = Get-Item "C:\Program Files (x86)\MSBuild\12.0\bin\msbuild.exe" -ErrorAction SilentlyContinue
 
