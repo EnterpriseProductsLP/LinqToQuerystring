@@ -11,12 +11,21 @@ properties {
     $SolutionFile = ".\\LinqToQuerystring.sln"
 }
 
-# orchestration
+###################################################################################
+# Discover Functions
+###################################################################################
+task ? {
+    WriteDocumentation
+}
+
+###################################################################################
+# Orchestration
+###################################################################################
 task default -depends RestorePackages, Compile
 task Build -depends Clean, RestorePackages, Compile -description "Clean and Compile the Solution in one fell swoop"
 
 ###################################################################################
-# Compilatin Tasks.
+# Compilation Tasks.
 ###################################################################################
 task RestorePackages {
 	$nugetexe = Get-Item .\.nuget\NuGet.exe
