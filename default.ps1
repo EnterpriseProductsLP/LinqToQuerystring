@@ -25,6 +25,13 @@ task default -depends RestorePackages, Compile
 task Build -depends Clean, RestorePackages, Compile -description "Clean and Compile the Solution in one fell swoop"
 
 ###################################################################################
+# Utility Tasks.
+###################################################################################
+task FixProjects -depends CreateSharedConfigs -description "Fixes all .csproject files in the repo." {
+    & .\Tools\Fixproj\fixproj.exe -fix -d -dd -s -r -t . -m *.csproj
+}
+
+###################################################################################
 # Compilation Tasks.
 ###################################################################################
 task RestorePackages {
