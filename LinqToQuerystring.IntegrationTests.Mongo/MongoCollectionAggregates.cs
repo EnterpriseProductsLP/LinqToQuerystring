@@ -40,7 +40,11 @@
                         return Configuration.DefaultTypeMap(type);
                     };
 
-                server = MongoServer.Create("mongodb://localhost/LinqToQuerystring?safe=true");
+                var mongoServerSettings = new MongoServerSettings
+                {
+                    Server = new MongoServerAddress("mongodb://localhost/LinqToQuerystring?safe=true")
+                };
+                server = new MongoServer(mongoServerSettings);
                 database = server.GetDatabase("LinqToQuerystring");
 
                 var mongoCollection = database.GetCollection<MongoDocument>("Dynamic");
