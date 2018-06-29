@@ -27,7 +27,7 @@ task Build -depends Clean, RestorePackages, Compile -description "Clean and Comp
 ###################################################################################
 # Utility Tasks.
 ###################################################################################
-task FixProjects -depends CreateSharedConfigs -description "Fixes all .csproject files in the repo." {
+task FixProjects -description "Fixes all .csproject files in the repo." {
     & .\Tools\Fixproj\fixproj.exe -fix -d -dd -s -r -t . -m *.csproj
 }
 
