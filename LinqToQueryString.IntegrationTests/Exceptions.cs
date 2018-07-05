@@ -1,4 +1,6 @@
-﻿namespace LinqToQueryString.IntegrationTests.Sql
+﻿using System.Data.Entity.Core;
+
+namespace LinqToQueryString.IntegrationTests.Sql
 {
     using System;
     using System.Data.Entity.Core;

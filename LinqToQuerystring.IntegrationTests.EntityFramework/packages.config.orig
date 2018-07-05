@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<packages>
+<<<<<<< HEAD
+  <package id="EntityFramework" version="6.2.0" targetFramework="net40" requireReinstallation="true" />
+  <package id="Machine.Specifications" version="0.12.0" targetFramework="net40" requireReinstallation="true" />
+  <package id="Machine.Specifications.Should" version="0.11.0" targetFramework="net40" requireReinstallation="true" />
+=======
+  <package id="EntityFramework" version="6.2.0" targetFramework="net461" />
+  <package id="Machine.Specifications" version="0.12.0" targetFramework="net461" />
+  <package id="Machine.Specifications.Should" version="0.11.0" targetFramework="net461" />
+>>>>>>> develop
+</packages>
