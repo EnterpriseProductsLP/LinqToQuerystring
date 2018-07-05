@@ -3,7 +3,7 @@
 namespace LinqToQueryString.IntegrationTests.Sql
 {
     using System;
-    using System.Data;
+    using System.Data.Entity.Core;
     using System.Linq;
 
     using LinqToQuerystring;

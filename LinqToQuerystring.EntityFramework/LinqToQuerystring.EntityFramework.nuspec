@@ -1,18 +1,19 @@
 <?xml version="1.0"?>
-<package>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
-    <id>OdataQueryToLinq.WebApi2</id>
+    <id>OdataQueryToLinq.EntityFramework</id>
     <version>1.0.0</version>
-    <title>OData query string to LINQ - WebApi2</title>
+    <title>OData query string to LINQ</title>
     <authors>eprod-foundation</authors>
     <projectUrl>http://estreamwiki.eprod.com</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Provides an action filter to enable LinqToQuerystring for Web API 2 actions that return IQueryable</description>
+    <description>
+      A fork of LinqToQuerystring that uses EF 6. Linq to Querystring is an expression
+      parser for .NET that aims to provide a lightweight subset of the OData URI Specification
+    </description>
     <copyright>Pete Smith 2013</copyright>
     <dependencies>
       <dependency id="OdataQueryToLinq" version="[1.0.0]"/>
-      <dependency id="Microsoft.AspNet.WebApi.Core" version="5.0.0" />
-      <dependency id="Microsoft.Net.Http" version="2.2.18" />
     </dependencies>
   </metadata>
 </package>

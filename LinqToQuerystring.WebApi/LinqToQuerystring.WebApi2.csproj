@@ -7,6 +7,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp></NuGetPackageImportStamp>
+    <NuSpecFile>LinqToQuerystring.WebApi2.nuspec</NuSpecFile>
     <OutputType>Library</OutputType>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C2EBA6BA-11AD-4AF7-B935-B71B761A63FC}</ProjectGuid>
@@ -41,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="LinqToQuerystring.WebAPI2.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

@@ -6,6 +6,7 @@
     <AssemblyName>LinqToQuerystring.Nancy</AssemblyName>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <FileAlignment>512</FileAlignment>
+    <NuSpecFile>LinqToQuerystring.Nancy.nuspec</NuSpecFile>
     <OutputType>Library</OutputType>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{60E15FF4-5729-4B80-B30A-E5BA395BD039}</ProjectGuid>
@@ -35,6 +36,9 @@
   <ItemGroup>
     <Compile Include="NancyExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LinqToQuerystring.Nancy.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LinqToQuerystring\LinqToQuerystring.csproj">
