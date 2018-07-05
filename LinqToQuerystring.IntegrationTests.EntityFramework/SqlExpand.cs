@@ -144,7 +144,7 @@
 
         private Because of = () => ex = Catch.Exception(() => result = testDb.ComplexCollection.LinqToQuerystring("$expand=ConcreteCollection").ToList());
 
-        private It should_throw_a_not_supported_exception = () => ex.ShouldBeOfType<NotSupportedException>();
+        private It should_throw_a_not_supported_exception = () => ex.ShouldBeOfExactType<NotSupportedException>();
     }
 
     public class When_not_expanding_complex_collection : SqlExpandWithSetup
