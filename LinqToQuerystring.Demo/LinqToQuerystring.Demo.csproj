@@ -206,7 +206,6 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\linqtoquerystring - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\linqtoquerystring - Web Deploy.pubxml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
