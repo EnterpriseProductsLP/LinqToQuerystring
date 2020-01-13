@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>OdataQueryToLinq</id>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
     <title>OData query string to LINQ</title>
     <authors>eprod-foundation</authors>
     <projectUrl>http://estreamwiki.eprod.com</projectUrl>
@@ -11,7 +11,6 @@
       A fork of LinqToQuerystring that uses EF 6. Linq to Querystring is an expression
       parser for .NET that aims to provide a lightweight subset of the OData URI Specification
     </description>
-    <copyright>Pete Smith 2013</copyright>
     <dependencies>
         <dependency id="Antlr" version="3.5.0.2" />
     </dependencies>
